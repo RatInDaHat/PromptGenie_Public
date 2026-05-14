@@ -1,1 +1,1 @@
-python wan_gen_gui.py
+python .\wan_gen_gui.py

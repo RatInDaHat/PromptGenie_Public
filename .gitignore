@@ -6,6 +6,7 @@ output/
 
 # Runtime user data (generated on first launch)
 data/phrases.json
+data/settings.json
 data/wan_gen_settings.json
 data/templates.json.bak
 
