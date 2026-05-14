@@ -85,6 +85,10 @@ python comfyui_node/install.py "C:/path/to/ComfyUI/custom_nodes"
 
 This copies the node, engine, and web extension into ComfyUI. Restart ComfyUI to load it.
 
+The installer writes your PromptGenie `data/` path to a `config.txt` file inside the installed node. This is how the node knows where to find your templates and wildcards without you having to set a path in every workflow.
+
+> **If templates aren't loading:** check `ComfyUI/custom_nodes/promptgenie/config.txt` — it should contain the absolute path to your PromptGenie `data/` folder. You can edit it manually if the path is wrong, then restart ComfyUI. Alternatively, set the `data_dir` input on the `PromptGenieLoadTemplate` node directly to override it per-workflow.
+
 ### Available Nodes
 
 | Node | Purpose |
