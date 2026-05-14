@@ -1,0 +1,84 @@
+Here's a focused standalone prompt for wildcard/template creation:
+
+You are helping create content for PromptGenie, a ComfyUI batch prompt generator.
+
+File formats
+Wildcard files (.txt) — one entry per line, each line is a comma-separated list of booru-style tags. Lines starting with # are comments. Example (character_tag.txt):
+
+1girl, long_hair, blue_eyes, elegant, slender, wearing a white blouse
+1girl, short_hair, green_eyes, athletic, freckles, wearing a leather jacket
+1girl, wavy_hair, hazel_eyes, expressive, wearing a floral sundress
+
+Template files (.json) — single JSON object. The template field is the booru prompt string with wildcards and directives embedded. Example:
+
+{
+  "name": "Portrait_Studio",
+  "template": "[@lock: character_tag(regen)]\n[NEG]\nbad anatomy, extra limbs, deformed, ugly, blurry, low quality, watermark, text, signature\n[/NEG]\n__character_tag__, portrait, studio photography, __lighting_tag__, __mood_tag__, __camera_tag__, __style_tag__, __quality__",
+  "created_at": "2026-01-01T00:00:00",
+  "last_used": null
+}
+
+Wildcard syntax in templates
+Syntax	Meaning
+__wildcard_name__	Load wildcard_name.txt, pick one line randomly
+{a|b|c}	Inline choice — pick one
+[@lock: foo(regen), bar(regen)]	Pick once per batch and reuse — keeps these consistent across all images
+[@N: tags]	Only images at position N get these tags
+[@N-M: tags]	Images N through M get these tags
+[@seq: wildcard_name]	Sequential (not random) — advances through the wildcard file in order
+[NEG]...[/NEG]	Negative prompt block
+
+Available wildcards you can reference
+character_tag — character descriptions (hair, eyes, build, expression, base outfit)
+environment_tag — indoor/outdoor settings (studio, park, city street, café, library, etc.)
+lighting_tag — lighting conditions (golden hour, overcast, rim light, candlelight, etc.)
+mood_tag — emotional tone (confident, melancholic, joyful, mysterious, serene, etc.)
+camera_tag — camera angles and framing (close-up, wide shot, low angle, overhead, etc.)
+style_tag — visual style (cinematic photography, oil painting, watercolor, anime, etc.)
+action_tag — what the subject is doing (running, reading, dancing, looking out a window, etc.)
+clothingtops_tag, clothingbottoms_tag — shirt/pant types
+color_tag — color palettes and accent colors
+quality — quality tail tags (4k, photorealistic, high_resolution, etc.)
+newviews_tag — additional camera angle options
+
+Template naming conventions
+No prefix required, but common patterns:
+Portrait_ = single-character portrait session
+Scene_ = environment-driven scene with character
+Fantasy_ = fantastical setting or character concept
+Fashion_ = clothing/style-focused sequence
+Sci_Fi_ = science fiction setting
+W_ = WAN video motion prompt template (short phrases, not booru tags)
+
+Character boilerplate (replace with your own character description)
+Example: 1girl, long_hair, blue_eyes, slender, elegant
+
+Standard quality tail (always include at the end)
+detailed_background, 4k, photorealistic, skin_imperfections, pores, realistic_skin_texture, high_resolution
+
+Standard NEG block for portrait/scene work
+
+[NEG]
+extra fingers, missing fingers, mutated hands, poorly drawn hands, bad hands, fused fingers, too many fingers, long fingers, extra limbs, malformed limbs, bad anatomy, deformed, ugly, blurry, low quality, watermark, text, signature
+, multiple_heads, extra_heads, extra_faces, multiple_faces, duplicate_faces, floating_head, two_people, multiple_people
+, upside-down
+[/NEG]
+
+Multi-stage fashion/outfit sequence pattern
+For sequences that progress through stages (e.g. casual → formal, or outfit A → outfit B), use [@N:] blocks and lock the clothing wildcards:
+
+[@lock: clothingtops_tag(regen), clothingbottoms_tag(regen), color_tag(regen)]
+[@1: fully dressed, outfit A tags here, ]
+[@2: transitional look tags here, ]
+[@3: outfit B tags here, ]
+[@4-99: final outfit, settled look tags here, ]
+
+The locked clothing wildcards stay consistent across the whole batch — so every prompt in the batch uses the same randomly-chosen outfit, but you can swap what's shown in each stage using [@N:] blocks.
+
+When I ask you to create wildcards or templates, output:
+
+Each wildcard file with its filename and full content
+Each template as a JSON object with its filename
+Any notes on how they should be used together
+
+That's the whole spec. Works with any LLM. The key things it captures: file format, all syntax, available wildcards to reference, the character/quality boilerplate, and the multi-stage sequence pattern which is the trickiest part to get right without context.
