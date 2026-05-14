@@ -2,5 +2,5 @@
   "name": "Fantasy_Character",
   "template": "[@lock: character_tag(regen)]\n[NEG]\nbad anatomy, extra limbs, deformed, ugly, blurry, low quality, watermark, text, signature\n[/NEG]\n__character_tag__, {warrior|mage|rogue|paladin|ranger}, {ancient ruins|enchanted forest|mystical cave|floating island|dragon lair}, __lighting_tag__, __mood_tag__, __style_tag__, highly detailed, __quality__",
   "created_at": "2026-01-01T00:00:00",
-  "last_used": null
+  "last_used": "2026-05-13T23:10:49"
 }
