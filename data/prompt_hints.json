@@ -1,0 +1,8 @@
+{
+  "walk": "The subject must be visibly walking — legs stepping forward in a natural alternating rhythm, arms swinging gently. Do not describe a static standing pose.",
+  "run": "The subject must be visibly running — full stride, arms pumping, body leaning forward with momentum. Continuous motion throughout the clip.",
+  "dance": "The subject must be actively dancing — body swaying, arms moving expressively, weight shifting with the rhythm. Do not describe a static posed stance.",
+  "fight": "The subject must be in active combat motion — striking, blocking, dodging, or grappling with continuous momentum. Do not describe a static held pose.",
+  "fall": "The subject must be visibly falling or tumbling — body rotating, limbs reacting to loss of balance, hair and clothing trailing the motion.",
+  "reach": "The subject must be actively reaching or extending toward something — arm extending, body leaning, weight shifting. Continuous purposeful motion."
+}

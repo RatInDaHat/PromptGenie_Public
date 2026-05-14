@@ -1,0 +1,26 @@
+indoors, bedroom, silk_sheets, warm_lighting
+indoors, bedroom, dim_lighting, night
+indoors, luxury_hotel_room, large_bed, warm_lighting
+indoors, hotel_room, city_view, night, window_light
+indoors, bathroom, shower, steam, tiles
+indoors, bathroom, bathtub, candles, warm_lighting
+indoors, living_room, sofa, soft_lighting
+indoors, kitchen, white_walls, natural_lighting
+indoors, office, desk, blinds, afternoon_light
+indoors, studio, white_background, soft_lighting
+indoors, penthouse, floor_to_ceiling_windows, city_view, night
+indoors, garage, concrete_floor, industrial_lighting
+outdoors, poolside, pool, summer, bright_sunlight
+outdoors, pool_deck, lounge_chair, sunny
+outdoors, beach, sand, ocean, golden_hour
+outdoors, beach, waves, sunset, warm_light
+outdoors, rooftop, city_skyline, night, ambient_light
+outdoors, garden, flowers, soft_natural_light
+outdoors, forest, trees, dappled_light
+outdoors, river, nature, afternoon_light
+outdoors, park, grass, sunny_day
+outdoors, cabin_porch, woods, golden_hour
+outdoors, yacht_deck, ocean, sunny
+indoors, dark_room, deep_shadows, moody_light
+indoors, studio, rim_lighting, dark_background
+outdoors, night_alley, deep_shadows, neon_accent

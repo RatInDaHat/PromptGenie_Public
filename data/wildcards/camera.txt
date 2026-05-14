@@ -1,0 +1,28 @@
+close-up
+extreme close-up
+medium shot
+full body shot
+portrait
+bust shot
+wide shot
+establishing shot
+low angle
+high angle
+dutch angle
+bird's eye view
+worm's eye view
+from behind
+profile view
+three-quarter view
+overhead shot
+aerial view
+macro shot
+bokeh
+shallow depth of field
+deep focus
+fish-eye lens
+telephoto lens
+wide angle lens
+over the shoulder
+dynamic angle
+silhouette

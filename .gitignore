@@ -1,0 +1,22 @@
+# Claude Code session memory
+.claude/
+
+# User-generated output
+output/
+
+# Runtime user data (generated on first launch)
+data/phrases.json
+data/wan_gen_settings.json
+data/templates.json.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
