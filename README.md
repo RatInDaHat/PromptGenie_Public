@@ -4,6 +4,8 @@ A dark-themed desktop app for generating batches of AI image/video prompts with 
 
 Also ships a **ComfyUI custom node** that runs the same wildcard engine inside ComfyUI, and a **WAN/LTX motion prompt generator** (`wan_gen.py`) that uses a local vision model to write video prompts from your generated images.
 
+![PromptGenie desktop app](docs/screenshots/PromptGenie.png)
+
 ---
 
 ## Features
